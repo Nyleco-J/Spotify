@@ -25,15 +25,57 @@
         background-color: white;
         display: block;
         border-radius: 5rem;
+        transition: .5s ease;
     }
     .toggle__menu span:nth-child(2){
         margin: .2rem 0;
     }
+    .toggle__menu.open span:first-child{
+        @apply translate-x-0 translate-y-[10px] rotate-[225deg]  ease-out duration-[.5s];
+    }
+    .toggle__menu.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .toggle__menu.open span:last-child{
+        @apply translate-x-0 translate-y-[-3px] rotate-[-225deg]  ease-out duration-[.5s];
+    }
     .header__nav ul{
-        @apply absolute bg-dark right-0 top-0 w-0 p-0 overflow-hidden h-[100vh];
+        @apply absolute bg-dark right-0 top-0 w-0 p-0 overflow-hidden h-[100vh] z-[1] lg:static lg:w-full lg:h-auto;
     }
+    .header__nav ul li:not(:first-child),.header__nav ul li:not(:last-child){
+        @apply mx-[2rem];
+    }
+    
+    /* .music__content__textul li:not(:first-child),.music__content__text ul li:not(:last-child){
+        @apply my-[3rem];
+    } */
+    
     .header__nav ul.open{
-        @apply w-[85%] p-[2rem] ;
+        @apply w-[85%] p-[2rem];
     }
-
+    .arjay.show{
+        @apply w-full;
+    }
+    .btn{
+        @apply inline-block py-[.5rem] px-[6rem];
+    }
+    .terms span{
+        @apply underline;
+    }
+    .footer__item{
+        @apply my-[3rem];
+    }
+    .footer__item ul li{
+        @apply my-[1rem];
+    }
+    .footer__item i.open{
+        @apply rotate-[-180deg]  ease-out duration-[.5s];
+    }
+    
+    .footer__item ul.open{
+        @apply ease-out duration-[.5s] max-h-96;
+    }
+    .foot__text ul li{
+        @apply my-[.5rem];
+    }
 }

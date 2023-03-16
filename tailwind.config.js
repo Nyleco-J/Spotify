@@ -7,7 +7,8 @@ module.exports = {
         blue: '#1D75DE',
         dark: '#000000',
         light: '#FFFFFF',
-        green: '#1DB954',
+        green: '#056952',
+        lgreen:'#C5F0C9',
       }
     },
     // container:{
