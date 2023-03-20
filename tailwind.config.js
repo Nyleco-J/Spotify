@@ -8,9 +8,21 @@ module.exports = {
         dark: '#000000',
         light: '#FFFFFF',
         green: '#056952',
+        hover:'#1ed760',
         lgreen:'#C5F0C9',
+        bgray: '#EFEFEF',
+        api: '#f59b23',
+        shield: '#B02897',
+        note: '#f8f8f8',
+        ios: '#549DF5',
+        android: '#F573A0',
+        emb: '#FF7465',
+        com: '#00A575'
       }
     },
+    backgroundImage:{
+      'feature': "url ('/img/feature.svg')"
+    }
     // container:{
     //   center: true,
     //   padding: '15px',

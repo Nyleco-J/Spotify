@@ -6,6 +6,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 1.5rem;
+    max-width: 80rem;
 }
 
 /* @layer base{
@@ -39,17 +40,32 @@
     .toggle__menu.open span:last-child{
         @apply translate-x-0 translate-y-[-3px] rotate-[-225deg]  ease-out duration-[.5s];
     }
+    .toggle__menu1 span{
+        width: 2rem;
+        height: .2rem;
+        background-color: white;
+        display: block;
+        border-radius: 5rem;
+        transition: .5s ease;
+    }
+    .toggle__menu1 span:nth-child(2){
+        margin: .2rem 0;
+    }
+    .toggle__menu1.open span:first-child{
+        @apply translate-x-0 translate-y-[10px] rotate-[225deg]  ease-out duration-[.5s];
+    }
+    .toggle__menu1.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .toggle__menu1.open span:last-child{
+        @apply translate-x-0 translate-y-[-3px] rotate-[-225deg]  ease-out duration-[.5s];
+    }
     .header__nav ul{
         @apply absolute bg-dark right-0 top-0 w-0 p-0 overflow-hidden h-[100vh] z-[1] lg:static lg:w-full lg:h-auto;
     }
     .header__nav ul li:not(:first-child),.header__nav ul li:not(:last-child){
         @apply mx-[2rem];
     }
-    
-    /* .music__content__textul li:not(:first-child),.music__content__text ul li:not(:last-child){
-        @apply my-[3rem];
-    } */
-    
     .header__nav ul.open{
         @apply w-[85%] p-[2rem];
     }
@@ -71,11 +87,19 @@
     .footer__item i.open{
         @apply rotate-[-180deg]  ease-out duration-[.5s];
     }
-    
+    .footer__item ul{
+        @apply ease-out duration-[.5s];
+    }
     .footer__item ul.open{
-        @apply ease-out duration-[.5s] max-h-96;
+        @apply ease-in duration-[.5s] max-h-96;
     }
     .foot__text ul li{
         @apply my-[.5rem];
+    }
+    .docu ul{
+        @apply absolute p-0 w-0 overflow-hidden z-[1] ;
+    }
+    .docu ul.open{
+        @apply w-[100%] p-[2rem];
     }
 }
