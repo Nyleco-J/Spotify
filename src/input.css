@@ -6,7 +6,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 1.5rem;
-    max-width: 80rem;
+    /* max-width: 80rem; */
 }
 
 /* @layer base{
@@ -96,10 +96,88 @@
     .foot__text ul li{
         @apply my-[.5rem];
     }
-    .docu ul{
-        @apply absolute p-0 w-0 overflow-hidden z-[1] ;
+    .circle{
+        @apply w-[7.5rem] text-center hover:opacity-[.9];
     }
-    .docu ul.open{
-        @apply w-[100%] p-[2rem];
+    .circle a{
+        @apply text-[1rem] font-semibold;
+    }
+    /* .platdocu__image{
+        @apply w-[7.5rem] h-[7.5rem] mb-[1.2rem] rounded-full flex justify-center items-center;
+    } */
+    .platdocu__image img{
+        @apply w-[4rem];
+    }
+    
+    /*header*/
+    .toggle__menu1 span{
+        width: 1.5rem;
+        height: .2rem;
+        background-color: white;
+        display: block;
+        border-radius: 2px;
+        transition: 300ms;    
+    }
+    .toggle__menu1 span:nth-child(2){
+        margin: .3rem 0;
+    }
+    .toggle__menu1.open span:first-child{
+        @apply translate-x-0 translate-y-[10px] rotate-[-45deg] ease-out duration-[.5];
+    }
+    .toggle__menu1.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .toggle__menu1.open span:last-child{
+        @apply translate-x-0 translate-y-[-6px] rotate-[45deg] ease-out duration-[.5];
+    }
+    .navi ul{
+        @apply bg-[#222326] w-[100%] left-0 top-[5rem] h-0 overflow-hidden
+    }
+    .navi ul.open{
+        @apply h-[30rem]
+    }
+    .navi ul li{
+        @apply h-[5rem] flex items-center border-[1px] border-[#8F8F8F]
+    }
+    .navi ul li a{
+        @apply text-[#ffffff] mx-[2rem]
+    }
+    .active{
+        @apply border-b-2 border-green
+    }
+    .navi2 ul li a{
+        @apply text-[#ffffff] text-[14px]
+    }
+    .navi2 ul li{
+        @apply ml-[4.5rem]
+    }
+
+    /*EXPLORE*/
+    .explore__content img{
+        @apply w-[2.5rem]
+    }
+    .image{
+        @apply hover:opacity-[.8];
+    }
+
+    /*footer*/
+    .docsfooter__item ul li:not(:first-child),.header__nav ul li:not(:last-child){
+        @apply my-[1rem];
+    }
+    .docsfooter__item1:not(:first-child),.header__nav ul li:not(:last-child){
+        @apply my-[1rem]
+    }
+
+    .docs__item{
+        @apply w-full
+    }
+    .docs:hover .docs__item{
+        @apply lg:h-[30vh];
+    }
+    .docs1:hover .docs__item{
+        @apply lg:h-[15vh];
+    }
+    .docs__content ul li{
+        @apply ml-[unset]
     }
 }
